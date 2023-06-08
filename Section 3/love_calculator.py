@@ -22,7 +22,11 @@ name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 
 combined_string = name1 + name2
-combined_string_lower = combined_string.lower()
+lower_case_string = combined_string.lower()
 
+t = lower_case_string.count("t")
+r = lower_case_string.count("r")
+u = lower_case_string.count("u")
+e = lower_case_string.count("e")
 
-
+true = t + r + u + e
