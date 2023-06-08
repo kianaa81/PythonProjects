@@ -26,3 +26,11 @@ elif size == "M":
   bill += 20
 else:
   bill += 25
+
+if add_pepperoni == "Y":
+  if size == "S":
+    bill += 2
+  else:
+    bill += 3
+
+
