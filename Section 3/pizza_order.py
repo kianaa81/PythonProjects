@@ -33,4 +33,5 @@ if add_pepperoni == "Y":
   else:
     bill += 3
 
-
+if extra_cheese == "Y":
+  bill += 1
