@@ -25,3 +25,5 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+
+game_images = [rock, paper, scissors]
