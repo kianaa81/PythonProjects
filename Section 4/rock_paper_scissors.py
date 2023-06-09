@@ -39,3 +39,13 @@ else:
     print("Computer chose:")
     print(game_images[computer_choice])
 
+    if user_choice == 0 and computer_choice == 2:
+        print("You win!")
+    elif computer_choice == 0 and user_choice == 2:
+        print("You lose")
+    elif computer_choice < user_choice:
+        print("You win!")
+    elif computer_choice > user_choice:
+        print("You lose!")
+    elif computer_choice == user_choice:
+        print("It's a draw")
