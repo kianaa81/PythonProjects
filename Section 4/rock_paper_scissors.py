@@ -35,3 +35,7 @@ if user_choice >= 3 or user_choice < 0:
 else:
     print(game_images[user_choice])
 
+    computer_choice = random.randint(0, 2)
+    print("Computer chose:")
+    print(game_images[computer_choice])
+
