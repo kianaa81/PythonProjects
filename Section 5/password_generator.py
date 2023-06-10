@@ -18,8 +18,8 @@ for char in range(1, nr_letters + 1):
     pasword += random_char
     print(pasword)
 
-
-
+for char in range(1, nr_numbers + 1):
+    password = random.choice(symbols)
 
 
 
