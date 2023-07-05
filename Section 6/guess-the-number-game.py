@@ -26,26 +26,30 @@ def set_difficulty():
        return EASY_LEVEL_TURNS
    else:
        return HARD_LEVEL_TURNS
-   
-# Choosing a random number between 1 - 100
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 an 100.")
-answer = randint(1, 100)
+
+def game():    
+    # Choosing a random number between 1 - 100
+    print("Welcome to the Number Guessing Game!")
+    print("I'm thinking of a number between 1 an 100.")
+    answer = randint(1, 100)
 
 
-turns = set_difficulty()    
+    turns = set_difficulty()    
 
-# Repeat the guessing functionality if they get it wrong
-guess = 0
-while guess != answer:
-    print(f"You have {turns} attempts remaining to guess the number.")
+    # Repeat the guessing functionality if they get it wrong
+    guess = 0
+    while guess != answer:
+        print(f"You have {turns} attempts remaining to guess the number.")
 
-    # Let the user guess the number
-    guess = int(input("Make a guess: "))
+        # Let the user guess the number
+        guess = int(input("Make a guess: "))
 
 
-# Track the number of turns and reduce by 1 if they get it wrong
-# Call the check_answer function to check if the number was correct
-turns = check_answer(guess, answer, turns)
-if turns == 0:
-    print("You've run out of guesses, you lose!")
+    # Track the number of turns and reduce by 1 if they get it wrong
+    # Call the check_answer function to check if the number was correct
+    turns = check_answer(guess, answer, turns)
+    if turns == 0:
+        print("You've run out of guesses, you lose!")
+        return
+    
+game()
