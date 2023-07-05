@@ -26,3 +26,11 @@ def set_difficulty():
        return EASY_LEVEL_TURNS
    else:
        return HARD_LEVEL_TURNS
+   
+# Choosing a random number between 1 - 100
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of a number between 1 an 100.")
+answer = randint(1, 100)
+
+
+turns = set_difficulty()    
