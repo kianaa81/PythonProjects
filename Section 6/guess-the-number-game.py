@@ -42,3 +42,10 @@ while guess != answer:
 
     # Let the user guess the number
     guess = int(input("Make a guess: "))
+
+
+# Track the number of turns and reduce by 1 if they get it wrong
+# Call the check_answer function to check if the number was correct
+turns = check_answer(guess, answer, turns)
+if turns == 0:
+    print("You've run out of guesses, you lose!")
