@@ -11,6 +11,8 @@ to_learn = data.to_dict(orient="records")
 def next_card():
     current_card = random.choice(to_learn)
     print(current_card["French"])
+    canvas.itemconfig(card_title, text="French")
+    canvas.itemconfig(card_word, text=current_card["French"])
 
 
 window = Tk()
@@ -22,9 +24,9 @@ canvas = Canvas(width=800, height=526)
 card_front_img = PhotoImage(file="images/card_front.png")
 canvas.create_image(400, 263, image=card_front_img)
 canvas.grid(row=0, column=0, columnspan=2)
-canvas.create_text(400, 263, text="word", font=("Ariel", 60, "bold"))
+card_word = canvas.create_text(400, 263, text="word", font=("Ariel", 60, "bold"))
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
-canvas.create_text(400, 150, text="Title", font=("Ariel", 40, "italic"))
+card_title = canvas.create_text(400, 150, text="Title", font=("Ariel", 40, "italic"))
 
 # Buttons
 cross_image = PhotoImage(file="images/wrong.png")
